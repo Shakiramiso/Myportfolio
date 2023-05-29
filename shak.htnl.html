@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device-width">
+        <title>success university| Welcome!</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container" >
+                <div id="branding" >
+                    <h1><span class="highlight">Success</span> University</h1>
+                </div>
+                <nav>
+                    <ul>
+                       <li class="current"><a href="home.html"> <button >HOME</button></a></li>
+                        <li><a href="about.html"><button >ABOUT</button></a></li>
+                        <li><a href="services.html"><button >SERVICE</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+         <form action="action.php" method="get">
+            <h3>Personal Details</h3>
+            <label>First Name</label><br>
+            <input type="text" placeholder="Your First Name"><br>
+            <label>Sur Name</label><br>
+            <input type="text" placeholder="Your Sur Name"><br>
+            <label>Other Name</label><br>
+            <input type="text" placeholder="Other Name"><br>
+            <label>Registration Number</label><br>
+            <input type="text" placeholder="Reg.Number"><br> 
+            <label>Gender</label><br>
+            <select name="choose">
+                <optgroup label="Gender">
+                    <option value="select">select</option>
+                    <option value="machinga">Male</option>
+                    <option value="machinga">Female</option>
+                    </optgroup>
+                    </select><br>
+            </select><br>
+            <label>T/A</label><br>
+            <input type="text" placeholder="Tradition Authority"><br>
+            <label>Village</label><br>
+            <input type="text" placeholder="home village"><br> 
+            <label>Date of birth</label><br>
+            <input type="Date"><br> 
+            <label>Phone Number</label><br>
+            <input type="Number" value="0" placeholder="Number"><br> 
+            <label>Registration Number</label><br>
+            <input type="text" placeholder="Reg.Number"><br><br>
+            <h3>contract Details</h3>
+            <label>Village/Township</label><br>
+            <input type="text" placeholder="type...."><br>  
+            <label>Street</label><br>
+            <input type="text" placeholder="type...."><br>
+            <h4>Guarantor</h4> 
+            <label> Name</label><br>
+            <input type="text" placeholder="type...."><br>
+            <label>Registration Number</label>
+            <input type="text" placeholder="type"><br>  
+         </form>
+         <div id="greeting"><button onclick="greeting()">greeetingS</button></div>
+
+         <script>        
+         function greeting(){
+const greetingElement = document.getElementById('greeting');
+const currentHour = new Date().getHours();
+
+let greeting;
+
+if (currentHour <= 0) {
+  greeting = 'Good morning';
+} else if (currentHour >0 && currentHour<= 16) {
+  greeting = 'Good afternoon';
+} else if(currentHour>16&&currentHour<=20){
+  greeting = 'Good evening';
+}else{
+  greeting="good night";
+}
+
+greetingElement.textContent = greeting;}
+</script>
+ 
+         <script>
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+            
+            searchInput.addEventListener('input', function(event) {
+              const searchTerm = event.target.value.toLowerCase();
+          
+              searchResults.innerHTML = '';
+            
+              if (searchTerm.trim() !== '') {
+            
+                const results = performSearch(searchTerm);
+                displayResults(results);
+              }
+            });
+            
+            function performSearch(searchTerm) {
+              
+              
+              return data.filter(item => item.toLowerCase().includes(searchTerm));
+            }
+            
+            function displayResults(results) {
+              if (results.length === 0) {
+                const noResultsItem = document.createElement('li');
+                noResultsItem.textContent = 'No results found';
+                searchResults.appendChild(noResultsItem);
+              } else {
+                results.forEach(result => {
+                  const item = document.createElement('li');
+                  item.textContent = result;
+                  searchResults.appendChild(item);
+                });
+              }
+            }
+            
+            
+                  </script>
+                    <form id="contact-form">
+                        <input type="email"name="email" placeholder="email" id="email"required><br>
+                        <input type="text"id="name" placeholder="name" required><br>
+                        <textarea id="message"></textarea>
+                        <input type="submit"></button>
+                    </form>
+                    <div id ="form-status"></div>
+                    
+                    
+                    
+                    <p style="color:white ;font-size: large; text-align: center;"> ,My name is NJEWA Chifundo bict2521. <br> A student studying ICT at mzuzu university.
+                         </p>
+                         
+            <h1 style="text-transform: uppercase;color: white;">this is social media link</h1>
+            <center>
+            <a href="https://www.mzuni.ac.mw" ><span style="color: white;"><h3>mzuni</h3> </a>
+            
+            </center> 
+            </main>
+                <footer style="background-color: orangered;text-align: center">
+                    <div class="footer-body" >
+                        <div style="display: flow-root; ;">CONTACTS DETAILS </div>
+                        <div>
+                            <ul style="list-style: none;">
+                                <li>      Whatsapp number 0995055227   </li>
+                                <li>
+            Email : shakiramisomali@gmail.com
+                                </li>
+                                <li>
+            Mobile number: 0995055227
+                                </li>
+                                <div>&copy; copy right </div>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </body>
+            </html>
+
+    </body>
+</html>
